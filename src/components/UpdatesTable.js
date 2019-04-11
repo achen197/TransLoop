@@ -1,5 +1,5 @@
 import React from 'react';
-import { checkPropTypes } from 'prop-types';
+import Icon from '@material-ui/core/Icon';
 
 const TableBody = props => {
 
@@ -7,13 +7,17 @@ const TableBody = props => {
         const circleColor = {
             background: row.color
         }
+        
         return (
-            <tr key={index}>
+            <tr className="line-info" key={index}>
                 <td className="line-name">
                     <div className="color-circles" style={circleColor}></div>
                     {row.name}
                 </td>
-                <td>{row.status}</td>
+                <td className="line-status">
+                    <span>{row.status}</span>
+                    <Icon>done</Icon>
+                </td>
             </tr>
         )
     })
@@ -35,6 +39,7 @@ export class UpdatesTable extends React.Component {
             <table className="table">
                 <TableBody 
                     trainUpdateData={trainUpdateData}
+                    // busUpdateData={busUpdateData}
                 />
             </table>
         )

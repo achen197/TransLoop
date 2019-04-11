@@ -48,6 +48,25 @@ const trainUpdates = [
     },
 ]
 
+const busUpdates = [
+    {
+        name: '502',
+        color: '#ffc425',
+        status: 'Delays'
+    },
+    {
+        name: '130, 131, 175',
+        color: 'red',
+        status: 'Minor'
+    },
+    {
+        name: '505, 555',
+        color: 'green',
+        status: 'Minor'
+    },
+]
+
+
 
 export class TripUpdates extends Component {
     state = {
@@ -60,7 +79,6 @@ export class TripUpdates extends Component {
 
     render() {
         const { value } = this.state;
-        const { trainUpdateData } = this.props;
 
         return (
             <div className="trip-updates">
