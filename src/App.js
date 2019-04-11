@@ -5,6 +5,7 @@ import { TripPlanner } from './components/TripPlanner';
 import { TripUpdates } from './components/TripUpdates';
 
 class App extends Component {
+
   render() {
     return (
       <div>

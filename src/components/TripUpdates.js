@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
+import { UpdatesTable } from './UpdatesTable';
 
 function TabContainer(props) {
     return (
@@ -21,6 +20,34 @@ const styles = theme => ({
     },
 });
 
+const trainUpdates = [
+    {
+        name: 'Airport',
+        color: '#ffc425',
+        status: 'Good Service'
+    },
+    {
+        name: 'Beenleigh',
+        color: 'red',
+        status: 'Good Service'
+    },
+    {
+        name: 'Caboolture',
+        color: 'green',
+        status: 'Good Service'
+    },
+    {
+        name: 'Cleveland',
+        color: 'blue',
+        status: 'Good Service'
+    },
+    {
+        name: 'Doomben',
+        color: 'purple',
+        status: 'Good Service'
+    },
+]
+
 
 export class TripUpdates extends Component {
     state = {
@@ -33,6 +60,7 @@ export class TripUpdates extends Component {
 
     render() {
         const { value } = this.state;
+        const { trainUpdateData } = this.props;
 
         return (
             <div className="trip-updates">
@@ -52,7 +80,11 @@ export class TripUpdates extends Component {
                     </Tabs>
                 </AppBar>
                 {value === 0 &&
-                    <TabContainer>Item One</TabContainer>
+                    <TabContainer>
+                        <UpdatesTable 
+                            trainUpdateData={trainUpdates}
+                        />
+                    </TabContainer>
                 }
                 {value === 1 &&
                     <TabContainer>Item Two</TabContainer>
