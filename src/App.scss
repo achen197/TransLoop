@@ -1,0 +1,106 @@
+
+
+$head-font: 'Dosis', sans-serif;
+
+body {
+  background: #fefefe;
+}
+
+.navbar {
+  background: #282c34;
+  padding: 2rem 3rem;
+
+  a {
+    font-family: $head-font;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    color: #FFF;
+    letter-spacing: 1px;
+  }
+}
+
+.no-pad {
+  padding: 0;
+}
+
+
+.headers {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.trip-planner {
+    background: #fbfbfb;
+    height: 90vh;
+    padding: 4rem 3rem;
+
+    form {
+
+      .form-group {
+        margin: 1.7rem 0;
+      }
+
+      label {
+        font-family: $head-font;
+        font-size: 1rem;
+        letter-spacing: 1px;
+      }
+
+      .form-control {
+        border-radius: 20px;
+        padding: 0.375rem 0.95rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    .MuiButton-containedPrimary-13 {
+      color: #555;
+      background-color: #ffca28;
+      text-transform: none;
+      font-family: $head-font;
+      letter-spacing: 1px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      float: right;
+      margin-right: 0.5rem;
+
+      &:hover {
+        background-color: #ffd54f;
+      }
+    }
+
+}
+
+.trip-updates {
+  padding: 4rem 3rem;
+
+  .MuiPaper-elevation4-45 {
+    box-shadow: none;
+  }
+
+  .MuiAppBar-colorDefault-36 {
+    background-color: #FFF;
+  }
+
+  .MuiTab-root-75 {
+    border-bottom: 3px solid #dadada;
+  }
+
+  .MuiTab-textColorPrimary-78.MuiTab-selected-80 {
+    border-bottom: 3px solid #555;
+    color: #555;
+    z-index: 1;
+  }
+
+  .MuiTab-label-85 {
+    color: #555;
+    font-family: $head-font;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+  }
+}
