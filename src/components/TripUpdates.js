@@ -13,61 +13,6 @@ function TabContainer(props) {
     );
 }
 
-const styles = theme => ({
-    root: {
-        backgroundColor: theme.palette.background.paper,
-        width: 500,
-    },
-});
-
-const trainUpdates = [
-    {
-        name: 'Airport',
-        color: '#ffc425',
-        status: 'Good Service'
-    },
-    {
-        name: 'Beenleigh',
-        color: 'red',
-        status: 'Good Service'
-    },
-    {
-        name: 'Caboolture',
-        color: 'green',
-        status: 'Good Service'
-    },
-    {
-        name: 'Cleveland',
-        color: 'blue',
-        status: 'Good Service'
-    },
-    {
-        name: 'Doomben',
-        color: 'purple',
-        status: 'Good Service'
-    },
-]
-
-const busUpdates = [
-    {
-        name: '502',
-        color: '#ffc425',
-        status: 'Delays'
-    },
-    {
-        name: '130, 131, 175',
-        color: 'red',
-        status: 'Minor'
-    },
-    {
-        name: '505, 555',
-        color: 'green',
-        status: 'Minor'
-    },
-]
-
-
-
 export class TripUpdates extends Component {
     state = {
         value: 0,
@@ -100,7 +45,6 @@ export class TripUpdates extends Component {
                 {value === 0 &&
                     <TabContainer>
                         <UpdatesTable 
-                            trainUpdateData={trainUpdates}
                         />
                     </TabContainer>
                 }
